@@ -29,12 +29,12 @@ public class PersonController {
 		return service.findByid(id);
 	}
 	
-	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
 	public List<PersonVO> findAll() {
 		return service.findAll();
 	}
 	
-	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE,
+	@PostMapping(consumes = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE },
 			produces = MediaType.APPLICATION_JSON_VALUE)
 	public PersonVO create(@RequestBody PersonVO person)  {
 		return service.create(person);

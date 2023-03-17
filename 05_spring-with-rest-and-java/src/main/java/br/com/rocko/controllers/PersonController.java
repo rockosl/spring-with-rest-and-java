@@ -24,7 +24,7 @@ public class PersonController {
 	@Autowired
 	private PersonServices service;
 	
-	@GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
+	@GetMapping(value = "/{id}", produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
 	public PersonVO findById(@PathVariable(value = "id") Long id) {
 		return service.findByid(id);
 	}

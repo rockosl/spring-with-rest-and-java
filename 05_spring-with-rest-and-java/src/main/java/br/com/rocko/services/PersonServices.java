@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import br.com.rocko.controllers.PersonController;
 import br.com.rocko.data.vo.v1.PersonVO;
+import br.com.rocko.exceptions.RequiredObjectIsNullException;
 import br.com.rocko.exceptions.ResourceNotFoundException;
 import br.com.rocko.mapper.DozerMapper;
 import br.com.rocko.model.Person;
@@ -48,6 +49,8 @@ public class PersonServices {
 	
 	public PersonVO create(PersonVO person) {
 		
+		if(person == null) throw new RequiredObjectIsNullException();
+		
 		logger.info("Creating one person!");
 		var entity = DozerMapper.parseObject(person, Person.class);
 		var vo = DozerMapper.parseObject(repository.save(entity), PersonVO.class);
@@ -56,6 +59,8 @@ public class PersonServices {
 	}
 	
 	public PersonVO update(PersonVO person) {
+
+		if(person == null) throw new RequiredObjectIsNullException();
 		
 		logger.info("Updating one person!");
 		

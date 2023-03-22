@@ -13,7 +13,7 @@ public class OpenApiConfig {
 	@Bean
 	public OpenAPI customOpenAPI() {
 		return new OpenAPI().info(new Info()
-				.title("RESTful API with java 18 and Spring Boot 3")
+				.title("RESTful API with java 19 and Spring Boot 3")
 				.version("v1")
 				.description("Some description about your API")
 				.termsOfService("https://github.com/rockosl/spring-with-rest-and-java")

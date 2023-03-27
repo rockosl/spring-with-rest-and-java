@@ -16,7 +16,7 @@ public class AbstractIntegrationTest {
 
 	static class Initializer implements ApplicationContextInitializer<ConfigurableApplicationContext>{
 		
-		public static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:latest");
+		static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:12.14");
 		
 		private static void startContainers() {
 			Startables.deepStart(Stream.of(postgres)).join();
@@ -24,9 +24,9 @@ public class AbstractIntegrationTest {
 		
 		private Map<String, String> createConnectionConfiguration() {
 			return Map.of(
-				"spring:datasource:url", postgres.getJdbcUrl(),
-				"spring:datasource:username", postgres.getUsername(),
-				"spring:datasource:password", postgres.getPassword()
+				"spring.datasource.url", postgres.getJdbcUrl(),
+				"spring.datasource.username", postgres.getUsername(),
+				"spring.datasource.password", postgres.getPassword()
 			);
 		}
 		

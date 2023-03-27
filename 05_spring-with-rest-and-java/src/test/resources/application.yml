@@ -1,3 +1,5 @@
+server:
+  port : 8888
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
@@ -12,5 +14,3 @@ springdoc:
   pathsToMatch: /api/**/v1/**
   swagger-ui:
     use-root-path: true
-server:
-  port : 8888

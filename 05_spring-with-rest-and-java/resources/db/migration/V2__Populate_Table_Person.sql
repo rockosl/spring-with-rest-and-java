@@ -2,3 +2,5 @@ INSERT INTO public.person (id, address, first_name, gender, last_name) VALUES (1
 INSERT INTO public.person (id, address, first_name, gender, last_name) VALUES (2, 'Joinville', 'Thais', 'Female', 'Baschirotto');
 INSERT INTO public.person (id, address, first_name, gender, last_name) VALUES (3, 'Bom Retiro', 'Clara', 'Female', 'Soethe');
 INSERT INTO public.person (id, address, first_name, gender, last_name) VALUES (4, 'São Ludgero', 'João Antônio', 'Male', 'Loch');
+
+ALTER SEQUENCE person_id_seq RESTART WITH 5;

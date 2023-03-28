@@ -1,3 +1,7 @@
+server:
+  port : 8888
+cors:
+  originPatterns: http://localhost:8080,https://rocko.com.br,http://localhost:3000
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
@@ -12,5 +16,3 @@ springdoc:
   pathsToMatch: /api/**/v1/**
   swagger-ui:
     use-root-path: true
-server:
-  port : 8888

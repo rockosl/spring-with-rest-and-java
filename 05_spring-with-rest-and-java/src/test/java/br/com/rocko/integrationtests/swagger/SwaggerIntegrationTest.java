@@ -1,4 +1,4 @@
-package br.com.rocko.integration.swagger;
+package br.com.rocko.integrationtests.swagger;
 
 import static io.restassured.RestAssured.given;
 
@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import br.com.rocko.configs.TestConfigs;
-import br.com.rocko.integration.testcontainers.AbstractIntegrationTest;
+import br.com.rocko.integrationtests.testcontainers.AbstractIntegrationTest;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class SwaggerIntegrationTest extends AbstractIntegrationTest {

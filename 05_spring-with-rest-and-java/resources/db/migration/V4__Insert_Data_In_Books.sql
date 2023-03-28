@@ -14,3 +14,5 @@ INSERT INTO public.books (author, launch_date, price, title) VALUES
 	('Richard Hunter e George Westerman', '2017-11-07 15:09:01.674000', 95.00, 'O verdadeiro valor de TI'),
 	('Marc J. Schiller', '2017-11-07 15:09:01.674000', 45.00, 'Os 11 segredos de líderes de TI altamente influentes'),
 	('Aguinaldo Aragon Fernandes e Vladimir Ferraz de Abreu', '2017-11-07 15:09:01.674000', 54.00, 'Implantando a governança de TI');
+	
+ALTER SEQUENCE books_id_seq RESTART WITH 16;

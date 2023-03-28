@@ -1,3 +1,5 @@
+cors:
+  originPatterns: http://localhost:8080,https://rocko.com.br,http://localhost:3000
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver

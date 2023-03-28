@@ -1,4 +1,4 @@
-package br.com.rocko.integration.testcontainers;
+package br.com.rocko.integrationtests.testcontainers;
 
 import java.util.Map;
 import java.util.stream.Stream;

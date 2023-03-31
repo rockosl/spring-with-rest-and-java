@@ -1,6 +1,5 @@
 package br.com.rocko.services;
 
-import org.apache.tomcat.util.json.Token;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;

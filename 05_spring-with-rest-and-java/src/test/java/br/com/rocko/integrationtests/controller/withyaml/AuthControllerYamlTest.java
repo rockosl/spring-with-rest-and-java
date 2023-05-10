@@ -45,7 +45,9 @@ public class AuthControllerYamlTest extends AbstractIntegrationTest {
 				.config(
 						RestAssuredConfig.config()
 						.encoderConfig(EncoderConfig.encoderConfig()
-								.encodeContentTypeAs(TestConfigs.CONTENT_TYPE_YML, ContentType.TEXT)))
+								.encodeContentTypeAs(
+										TestConfigs.CONTENT_TYPE_YML, 
+										ContentType.TEXT)))
 				.accept(TestConfigs.CONTENT_TYPE_YML)
 				.basePath("/auth/signin")
 					.port(TestConfigs.SERVER_PORT)

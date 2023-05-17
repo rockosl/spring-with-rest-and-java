@@ -274,6 +274,7 @@ public class PersonControllerYamlTest extends AbstractIntegrationTest {
 		assertNotNull(foundPersonFour.getGender());
 		
 		assertEquals(4, foundPersonFour.getId());
+		System.out.println("teste commit");
 		
 		assertEquals("João Antônio", foundPersonFour.getFirstName());
 		assertEquals("Loch", foundPersonFour.getLastName());
